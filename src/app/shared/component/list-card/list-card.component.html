@@ -1,0 +1,24 @@
+<h2>List Product</h2>
+<ng-template [ngIf]="news ? news : []">
+  <div class="box">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" *ngFor="let itemCard of news">
+        <div class="box-part text-center">
+          <!-- <i class="fa fa-instagram fa-3x" aria-hidden="true"></i> -->
+          <img src="{{itemCard.img}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <div class="title">
+              <h4>{{itemCard.title | wordLimit:15}}</h4>
+            </div>
+            <div class="text">
+              <span>{{itemCard.desc | wordLimit:70}}</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a href="#">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>

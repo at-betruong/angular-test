@@ -1,0 +1,44 @@
+<!-- Heading Row -->
+<div class="row align-items-center my-5">
+  <div class="col-lg-7">
+    <img
+      class="img-fluid rounded mb-4 mb-lg-0"
+      src="http://jeviensbientot.com/wp-content/uploads/2015/02/poisson-chat-900x400.jpg"
+      alt=""
+    />
+  </div>
+  <!-- /.col-lg-8 -->
+  <div class="col-lg-5">
+    <h1 class="font-weight-light">Business Name or Tagline</h1>
+    <p>
+      This is a template that is great for small businesses. It doesn't have too
+      much fancy flare to it, but it makes a great use of the standard Bootstrap
+      core components. Feel free to use this template for any project you want!
+    </p>
+    <a class="btn btn-primary" href="#">Call to Action!</a>
+  </div>
+  <!-- /.col-md-4 -->
+</div>
+<!-- /.row -->
+
+<div class="box">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" *ngFor="let itemCard of news$">
+        <div class="box-part text-center">
+          <!-- <i class="fa fa-instagram fa-3x" aria-hidden="true"></i> -->
+          <img src="{{itemCard.img}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <div class="title">
+              <h4>{{itemCard.title }}</h4>
+            </div>
+            <div class="text">
+              <span>{{itemCard.desc}}</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a [routerLink]="['/detail-card', itemCard.id]" routerLinkActive="active">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
